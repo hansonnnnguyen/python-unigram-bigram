@@ -1,0 +1,84 @@
+# Sentiment Analysis with LSTM and DistilBERT on IMDb Reviews
+
+Description:
+This project compares two deep learning approaches for sentiment analysis:
+an LSTM-based neural network and a DistilBERT transformer model. 
+Both models were trained and evaluated on the IMDb movie review dataset 
+for binary sentiment classification (positive vs negative reviews).
+
+The goal of the project was to analyze how traditional recurrent neural 
+networks compare against modern transformer-based architectures in NLP tasks.
+
+Technologies Used:
+- Python
+- PyTorch
+- HuggingFace Transformers
+- Scikit-learn
+- NumPy
+- Datasets (HuggingFace)
+
+Concepts Demonstrated:
+- Natural Language Processing (NLP)
+- Deep Learning
+- Sentiment Analysis
+- Tokenization
+- Sequence Modeling
+- Transformer Models
+- Model Evaluation Metrics
+- Binary Text Classification
+
+Models:
+1. LSTM Classifier
+   - Custom vocabulary generation
+   - Word embeddings
+   - Sequential text processing
+
+2. DistilBERT Classifier
+   - Pretrained transformer model
+   - Contextual word representations
+   - Fine-tuning for sentiment classification
+
+Dataset:
+IMDb Movie Review Dataset
+Source: HuggingFace Datasets
+
+Evaluation Metrics:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+
+Results:
+LSTM:
+- Accuracy: 52.40%
+- Precision: 53.13%
+- Recall: 20.90%
+- F1-score: 30.00%
+
+DistilBERT:
+- Accuracy: 82.00%
+- Precision: 85.29%
+- Recall: 77.33%
+- F1-score: 81.12%
+
+Key Finding:
+DistilBERT significantly outperformed the LSTM model due to its ability 
+to capture contextual relationships and pretrained language understanding.
+
+How to Run:
+Create virtual environment:
+python -m venv .venv
+
+Activate environment:
+Windows:
+.venv\Scripts\activate
+
+Install dependencies:
+pip install datasets transformers torch scikit-learn pandas accelerate
+
+Run LSTM model:
+python lstm_imdb.py
+
+Run DistilBERT model:
+python distilbert_imdb.py
+
